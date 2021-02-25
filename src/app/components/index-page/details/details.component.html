@@ -1,17 +1,29 @@
-<div *ngIf="post">
-	<div >
-		<h1>{{post.title}}</h1>
-		<p>{{post.body}}</p>
+<div >
+	<div *ngIf="post" >
+		<mat-card>
+			<mat-card-header>
+				<mat-card-title>
+					<h1>Title: <i>{{post.title}}</i></h1>
+				</mat-card-title>
+			</mat-card-header>
+			<mat-card-content>
+				<p>{{post.body}}</p>
+			</mat-card-content>
+		</mat-card>
 	</div>
+	
+	
+	<mat-card>
+		<div *ngIf="comments">
+			<div *ngFor="let comment of comments">
+				<span>{{comment.email}}</span>
+				<p>
+					{{comment.body}}
+				</p>
+			</div>
+		</div>
+
+	</mat-card>
+	
+	
 </div>
-
-
-<div *ngIf="comments">
-	<div *ngFor="let comment of comments">
-		<span>{{comment.email}}</span>
-		<p>
-			{{comment.body}}
-		</p>
-	</div>
-</div>
-

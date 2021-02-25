@@ -12,7 +12,6 @@ export class IndexPageComponent implements OnInit {
 	posts: Post;
 
 	p: number = 1;
-	collection;
 
 	constructor(private getPostsServiceService: GetPostsServiceService) {}
 
@@ -21,6 +20,5 @@ export class IndexPageComponent implements OnInit {
 			this.posts = data;
 			console.log(this.posts);
 		});
-		this.collection = this.posts;
 	}
 }

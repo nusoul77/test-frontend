@@ -1,17 +1,21 @@
 			<div fxLayout="row wrap" fxLayoutAlign="space-around center" >
-			<mat-card *ngFor="let post of posts | paginate: { itemsPerPage: 9, currentPage: p }" class="example-card">
-				<mat-card-header>
-				  <mat-card-title>{{post.title}}</mat-card-title>
-				</mat-card-header>
-				<mat-card-content>
-				  <p>
-					{{post.body}}
-				  </p>
-				</mat-card-content>
-				<mat-card-actions>
-					<a mat-button routerLink='details/{{post.id}}' routerLinkActive="active" color="primary"> details </a>
-				</mat-card-actions>
-			  </mat-card>
+				<mat-card *ngFor="let post of posts | paginate: { itemsPerPage: 12, currentPage: p }" class="example-card">
+					
+					<div>
+						<mat-card-header>
+							<mat-card-title>{{post.title}}</mat-card-title>
+						  </mat-card-header>
+						  <mat-card-content>
+							<p>
+							  {{post.body}}
+							</p>
+						  </mat-card-content>
+						  <div style="position: absolute;
+						  bottom: 0; margin-bottom: 10px;" >
+							  <a mat-button routerLink='details/{{post.id}}' routerLinkActive="active" color="primary"> details </a>
+					  </div>
+					</div>
+				  </mat-card>
 					 
 		  <pagination-controls (pageChange)="p = $event"></pagination-controls>
 		</div>
