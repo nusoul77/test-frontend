@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { PageEvent } from "@angular/material/paginator";
 import { Post } from "src/app/interfaces/post";
 import { GetPostsServiceService } from "src/app/services/get-posts-service.service";
 
@@ -10,6 +11,9 @@ import { GetPostsServiceService } from "src/app/services/get-posts-service.servi
 export class IndexPageComponent implements OnInit {
 	posts: Post;
 
+	p: number = 1;
+	collection;
+
 	constructor(private getPostsServiceService: GetPostsServiceService) {}
 
 	ngOnInit(): void {
@@ -17,5 +21,6 @@ export class IndexPageComponent implements OnInit {
 			this.posts = data;
 			console.log(this.posts);
 		});
+		this.collection = this.posts;
 	}
 }

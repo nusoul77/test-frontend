@@ -7,6 +7,9 @@ import { RouterModule } from "@angular/router";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { MatCardModule } from "@angular/material/card";
 import { MatButtonModule } from "@angular/material/button";
+import { DetailsModule } from "./details/details.module";
+
+import { NgxPaginationModule } from "ngx-pagination";
 
 @NgModule({
 	declarations: [IndexPageComponent],
@@ -17,6 +20,8 @@ import { MatButtonModule } from "@angular/material/button";
 		MatCardModule,
 		MatButtonModule,
 		FlexLayoutModule,
+		DetailsModule,
+		NgxPaginationModule,
 	],
 	exports: [IndexPageComponent],
 })

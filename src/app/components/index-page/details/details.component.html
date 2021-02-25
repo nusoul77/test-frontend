@@ -1,2 +1,17 @@
-<h1>{{post.title}}</h1>
-<p>{{post.body}}</p>
+<div *ngIf="post">
+	<div >
+		<h1>{{post.title}}</h1>
+		<p>{{post.body}}</p>
+	</div>
+</div>
+
+
+<div *ngIf="comments">
+	<div *ngFor="let comment of comments">
+		<span>{{comment.email}}</span>
+		<p>
+			{{comment.body}}
+		</p>
+	</div>
+</div>
+
