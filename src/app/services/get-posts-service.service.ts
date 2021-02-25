@@ -7,15 +7,19 @@ import { Post } from "../interfaces/post";
 	providedIn: "root",
 })
 export class GetPostsServiceService {
+	posts;
+
 	constructor(private http: HttpClient) {}
 
 	getPosts() {
 		return this.http.get("https://jsonplaceholder.typicode.com/posts").pipe(
 			map((res: Post) => {
+				this.posts = res;
 				return res;
 			})
 		);
 	}
+
 	getPost(id) {
 		return this.http
 			.get(`https://jsonplaceholder.typicode.com/posts/${id}`)
