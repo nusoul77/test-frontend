@@ -8,7 +8,7 @@ export const IndexPageRoutes: Routes = [
 		component: IndexPageComponent,
 	},
 	{
-		path: "details",
+		path: "details/:id",
 		component: DetailsComponent,
 	},
 ];

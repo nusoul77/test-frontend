@@ -16,4 +16,13 @@ export class GetPostsServiceService {
 			})
 		);
 	}
+	getPost(id) {
+		return this.http
+			.get(`https://jsonplaceholder.typicode.com/posts/${id}`)
+			.pipe(
+				map((res: Post) => {
+					return res;
+				})
+			);
+	}
 }
