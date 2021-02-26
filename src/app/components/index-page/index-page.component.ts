@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { fromEvent } from 'rxjs';
 import { Post } from 'src/app/interfaces/post';
 import { PostsService } from 'src/app/services/posts.service';
 
@@ -18,8 +17,8 @@ export class IndexPageComponent implements OnInit {
     this.postsService.getPosts().subscribe((data: []) => {
       this.posts = data;
       this.sidePosts = this.posts.slice(0, 20);
-      console.log(this.posts);
-      console.log(this.sidePosts);
+      // console.log(this.posts);
+      // console.log(this.sidePosts);
     });
   }
 }

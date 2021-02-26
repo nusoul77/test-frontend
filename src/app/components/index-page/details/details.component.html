@@ -1,29 +1,101 @@
-<div>
-  <div *ngIf="post">
-    <mat-card>
-      <mat-card-header>
-        <mat-card-title>
-          <h1>Title: <i>{{post.title}}</i></h1>
-        </mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <p>{{post.body}}</p>
-      </mat-card-content>
-    </mat-card>
+<div fxLayout="row" fxLayoutAlign="space-evenly center" >
+  <div>
+    <div *ngIf="post">
+      <mat-card>
+        <div>
+          <mat-card-title>
+            {{post.title | uppercase}}
+          </mat-card-title>
+  
+          <mat-card-subtitle>
+            posted on 26-Feb-2021 15:43 GMT +3
+          </mat-card-subtitle>
+      
+          <mat-card-content>
+            <img src="http://dummyimage.com/300x350/c0c0c0" />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam, nobis tempora voluptates excepturi sint? Voluptatem recusandae officiis sint illum beatae suscipit id deserunt atque aliquid iusto!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam, nobis tempora voluptates excepturi sint? Voluptatem recusandae officiis sint illum beatae suscipit id deserunt atque aliquid iusto!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam, nobis tempora voluptates excepturi sint? Voluptatem recusandae officiis sint illum beatae suscipit id deserunt atque aliquid iusto!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam, nobis tempora voluptates excepturi sint? Voluptatem recusandae officiis sint illum beatae suscipit id deserunt atque aliquid iusto!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam, nobis tempora voluptates excepturi sint? Voluptatem recusandae officiis sint illum beatae suscipit id deserunt atque aliquid iusto!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam, nobis tempora voluptates excepturi sint? Voluptatem recusandae officiis sint illum beatae suscipit id deserunt atque aliquid iusto!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam, nobis tempora voluptates excepturi sint? Voluptatem recusandae officiis sint illum beatae suscipit id deserunt atque aliquid iusto!
+             </p>
+             <h2>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam,
+             </h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam, nobis tempora voluptates excepturi sint? Voluptatem recusandae officiis sint illum beatae suscipit id deserunt atque aliquid iusto!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam, nobis tempora voluptates excepturi sint? Voluptatem recusandae officiis sint illum beatae suscipit id deserunt atque aliquid iusto!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam, nobis tempora voluptates excepturi sint? Voluptatem recusandae officiis sint illum beatae suscipit id deserunt atque aliquid iusto!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam, nobis tempora voluptates excepturi sint? Voluptatem recusandae officiis sint illum beatae suscipit id deserunt atque aliquid iusto!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam, nobis tempora voluptates excepturi sint? Voluptatem recusandae officiis sint illum beatae suscipit id deserunt atque aliquid iusto!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam, nobis tempora voluptates excepturi sint? Voluptatem recusandae officiis sint illum beatae suscipit id deserunt atque aliquid iusto!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam, nobis tempora voluptates excepturi sint? Voluptatem recusandae officiis sint illum beatae suscipit id deserunt atque aliquid iusto!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam, nobis tempora voluptates excepturi sint? Voluptatem recusandae officiis sint illum beatae suscipit id deserunt atque aliquid iusto!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam, nobis tempora voluptates excepturi sint? Voluptatem recusandae officiis sint illum beatae suscipit id deserunt atque aliquid iusto!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam, nobis tempora voluptates excepturi sint? Voluptatem recusandae officiis sint illum beatae suscipit id deserunt atque aliquid iusto!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam, nobis tempora voluptates excepturi sint? Voluptatem recusandae officiis sint illum beatae suscipit id deserunt atque aliquid iusto!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam, nobis tempora voluptates excepturi sint? Voluptatem recusandae officiis sint illum beatae suscipit id deserunt atque aliquid iusto!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam, nobis tempora voluptates excepturi sint? Voluptatem recusandae officiis sint illum beatae suscipit id deserunt atque aliquid iusto!
+              </p>
+          </mat-card-content>
+      
+          <div class="card-footer">
+            <div class="card-actions" fxLayout="row" fxLayoutAlign="space-around center">
+              <div class="cw" matTooltip="What do you think about it?" matTooltipPosition="above">
+                <span class="material-icons c"><i class="c"></i></span>
+              </div>
+              <div class="lw" matTooltip="Do you like this article?" matTooltipPosition="above">
+                <span class="material-icons l"><i class="l"></i></span>
+              </div>
+              <div class="ww" matTooltip="3516 people aredy read this article" matTooltipPosition="above">
+                <span class="material-icons w"><i class="w"></i></span> 
+              </div>
+            </div>
+          </div>
+      
+        </div>
+        </mat-card>
+    </div>
   </div>
 
-
   <div *ngIf="comments" >
-    <div *ngFor="let comment of comments">
-        <mat-card>
-        <span>{{comment.email}}</span>
-        <p>
-          {{comment.body}}
-        </p>
-      </mat-card>
+    <div class="comments">
+      <span style="margin-left: 40px;">
+        <strong>Comments:</strong>
+      </span>
+      <div *ngFor="let comment of comments">
+        <mat-card class="comment">
+          <mat-toolbar>
+            <span>{{comment.email}} </span>
+            <mat-card-subtitle>
+              15 min ago
+            </mat-card-subtitle>
+            <span class="example-spacer"></span>
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+          </mat-toolbar>
+          <p>
+            {{comment.body}}
+          </p>
+          <div class="card-footer">
+            <div class="card-actions" fxLayout="row" fxLayoutAlign="space-around center">
+              <div class="cw" matTooltip="reply to this comment" matTooltipPosition="above">
+                <span class="material-icons c"><i class="c"></i></span>
+              </div>
+              <div class="lw" matTooltip="like this comment" matTooltipPosition="above">
+                <span class="material-icons l"><i class="l"></i></span>
+              </div>
+            </div>
+          </div>
+        </mat-card>
       </div>
     </div>
-
-
+  </div>
 
 </div>

@@ -1,23 +1,28 @@
-@media only screen and (max-width: 600px) {
-  .main-content {
-    width: 100%;
-    float: none;
-  }
-  .sidebar {
-    display: none;
-  }
-  .side-bar-links {
-    display: none;
-  }
-  .side-posts {
-    display: none;
-  }
-}
+// @media only screen and (max-width: 1200px) {
+//   .side-posts {
+//     display: none;
+//   }
+// }
+
+// @media screen and (max-width: 900px) and (min-width: 600px) {
+//   .main-content {
+//     width: 100%;
+//     float: none;
+//   }
+// }
+// @media screen and (max-width: 900px) and (min-width: 600px) {
+//   .sidebar {
+//     display: none;
+//   }
+// }
+// @media only screen and (max-width: 1200px) {
+//   .side-bar-links {
+//     display: none;
+//   }
+// }
+
 $base-color: #a82e2e;
 
-// .border {
-//   border-color: #e9e9e9 !important;
-// }
 ::ng-deep .mat-tooltip {
   font-size: 14px;
 }
@@ -55,14 +60,14 @@ $base-color: #a82e2e;
   }
 }
 
-@supports (width: 100%) {
-  @media screen and (min-width: 1200px) {
-    .main-content {
-      width: 100%;
-      float: none;
-    }
-  }
-}
+// @supports (width: 100%) {
+//   @media screen and (min-width: 1200px) {
+//     .main-content {
+//       width: 100%;
+//       float: none;
+//     }
+//   }
+// }
 
 .main-content {
   float: right;
@@ -81,7 +86,6 @@ mat-card-content {
   height: 75px;
   position: relative;
   box-shadow: 0px -43px 20px -9px rgba(34, 60, 80, 0.2) inset;
-  // background-color: #a82e2e;
 }
 
 mat-card {

@@ -1,6 +1,128 @@
+$base-color: #a82e2e;
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
 mat-card {
-  margin-bottom: 15px;
-  background-color: #eeeeee;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin: 20px;
+  border-radius: 2px;
+  border: 2px solid #e9e9e9;
+  box-shadow: none !important;
+
+  .mat-card > :first-child,
+  .mat-card-content > :first-child {
+    float: left;
+    margin-right: 20px;
+  }
+
+  .card-footer {
+    margin-left: -16px;
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    bottom: -40px;
+    background-color: #f9f9fb;
+    border-top: 1 solid #e9e9e9;
+
+    .card-actions {
+      display: inline-flex;
+      margin-left: 40px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      .material-icons.c::before {
+        margin-right: 30px;
+        content: 'comment';
+        opacity: 0.5;
+      }
+
+      .cw:hover .material-icons.c::before {
+        content: 'add_comment';
+        opacity: 1;
+      }
+
+      .material-icons.l::before {
+        margin-right: 30px;
+        content: 'thumb_up_off_alt';
+        opacity: 0.5;
+      }
+
+      .lw:hover .material-icons.l::before {
+        content: 'thumb_up';
+        opacity: 1;
+      }
+
+      .material-icons.w::before {
+        margin-right: 30px;
+        content: 'remove_red_eye';
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.comments {
+  margin-top: 100px;
+  padding-top: 20px;
+  background-color: #f9f9fb;
+
+  .mat-card-title:not(:first-child),
+  .mat-card-subtitle:not(:first-child) {
+    margin: 20px;
+  }
+
+  .comment {
+    margin-bottom: 50px;
+    padding: 0;
+
+    p {
+      padding: 20px;
+    }
+
+    span {
+      font-weight: 500;
+    }
+  }
+
+  .card-footer {
+    margin-left: -16px;
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    bottom: -40px;
+    background-color: #f9f9fb;
+    border-top: 1 solid #e9e9e9;
+
+    .card-actions {
+      display: inline-flex;
+      margin-left: 40px;
+      position: absolute;
+      bottom: 0;
+      margin-left: 80%;
+
+      .material-icons.c::before {
+        margin-right: 30px;
+        content: 'reply';
+        opacity: 0.5;
+      }
+
+      .cw:hover .material-icons.c::before {
+        content: 'reply';
+        opacity: 1;
+      }
+
+      .material-icons.l::before {
+        margin-right: 30px;
+        content: 'thumb_up_off_alt';
+        opacity: 0.5;
+      }
+
+      .lw:hover .material-icons.l::before {
+        content: 'thumb_up';
+        opacity: 1;
+      }
+    }
+  }
 }
