@@ -1,25 +1,25 @@
-// @media only screen and (max-width: 1200px) {
-//   .side-posts {
-//     display: none;
-//   }
-// }
+@media only screen and (max-width: 1200px) {
+  .side-posts {
+    display: none !important;
+  }
+}
 
-// @media screen and (max-width: 900px) and (min-width: 600px) {
-//   .main-content {
-//     width: 100%;
-//     float: none;
-//   }
-// }
-// @media screen and (max-width: 900px) and (min-width: 600px) {
-//   .sidebar {
-//     display: none;
-//   }
-// }
-// @media only screen and (max-width: 1200px) {
-//   .side-bar-links {
-//     display: none;
-//   }
-// }
+@media screen and (max-width: 1200px) {
+  .main-content {
+    width: 100% !important;
+    float: none;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .sidebar {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .side-bar-links {
+    display: none !important;
+  }
+}
 
 $base-color: #a82e2e;
 
