@@ -1,3 +1,18 @@
+@media only screen and (max-width: 600px) {
+  .main-content {
+    width: 100%;
+    float: none;
+  }
+  .sidebar {
+    display: none;
+  }
+  .side-bar-links {
+    display: none;
+  }
+  .side-posts {
+    display: none;
+  }
+}
 $base-color: #a82e2e;
 
 // .border {
@@ -5,6 +20,56 @@ $base-color: #a82e2e;
 // }
 ::ng-deep .mat-tooltip {
   font-size: 14px;
+}
+
+.side-posts {
+  padding-right: 30px;
+  display: block;
+  border-right: 3px solid #ccc;
+  height: 85vw;
+  float: left;
+  width: 25%;
+
+  a {
+    text-decoration: none;
+    color: #353535;
+  }
+
+  li {
+    list-style: none;
+  }
+}
+
+.side-bar-links {
+  span {
+    margin-bottom: 7px;
+    padding-bottom: 3px;
+    display: block;
+    border-bottom: 1px solid #ccc;
+
+    &:hover {
+      border-bottom: 1px solid $base-color;
+      color: #000;
+      font-weight: 500;
+    }
+  }
+}
+
+@supports (width: 100%) {
+  @media screen and (min-width: 1200px) {
+    .main-content {
+      width: 100%;
+      float: none;
+    }
+  }
+}
+
+.main-content {
+  float: right;
+  width: 75%;
+  position: absolute;
+  top: 85px;
+  right: 0;
 }
 
 mat-card-title {

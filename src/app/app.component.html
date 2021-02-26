@@ -1,11 +1,40 @@
 <p>
 	<mat-toolbar class="header">
-		<span style="user-select: none;">Read[POSTS]</span>
-		<span class="nav">
-			<a routerLink='/' routerLinkActive="active"> main </a>
-      <a routerLink='#' routerLinkActive="active"> about </a>
-      <a routerLink='#' routerLinkActive="active"> contacts </a>
-		</span>
+    <div class="logo">
+      <span>Capitol </span>
+    </div>
+    <div>
+      <img src="../assets/logo.png" alt="Capitol Hill logo">
+    </div>
+    <div style="user-select: none;" class="logo">
+      <span>Hill </span>
+    </div>
+    <span class="example-spacer"></span>
+    <div class="search" >
+      <mat-form-field class="example-full-width">
+        <input matInput >
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+    </div>
+    <span class="example-spacer"></span>
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+      <mat-menu #menu="matMenu">
+        <mat-list>
+          <mat-list-item>
+            <a routerLink='/' routerLinkActive="active" class="menu-link"> main </a>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>
+            <a routerLink='#' routerLinkActive="active" class="menu-link"> about </a>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>
+            <a routerLink='#' routerLinkActive="active" class="menu-link"> contacts </a>
+          </mat-list-item>
+        </mat-list>
+      </mat-menu>
 	</mat-toolbar>
 </p>
 
