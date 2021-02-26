@@ -1,9 +1,16 @@
-.nav {
-	margin: 0 auto;
-	height: 35px;
+$base-color: #7d132d;
 
-	a {
-		color: #fff;
-		text-decoration: none;
-	}
+.header {
+  background: rgb(125, 19, 45);
+  background: linear-gradient(170deg, #7d132d 50%, #790947 100%);
+}
+
+.nav {
+  margin: 0 auto;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 25px;
+  }
 }

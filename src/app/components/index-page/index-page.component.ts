@@ -1,24 +1,22 @@
-import { Component, OnInit } from "@angular/core";
-import { PageEvent } from "@angular/material/paginator";
-import { Post } from "src/app/interfaces/post";
-import { GetPostsServiceService } from "src/app/services/get-posts-service.service";
+import { Component, OnInit } from '@angular/core';
+import { fromEvent } from 'rxjs';
+import { Post } from 'src/app/interfaces/post';
+import { PostsService } from 'src/app/services/posts.service';
 
 @Component({
-	selector: "app-index-page",
-	templateUrl: "./index-page.component.html",
-	styleUrls: ["./index-page.component.scss"],
+  selector: 'app-index-page',
+  templateUrl: './index-page.component.html',
+  styleUrls: ['./index-page.component.scss'],
 })
 export class IndexPageComponent implements OnInit {
-	posts: Post;
+  posts: Post;
+  p: number = 1;
+  constructor(private postsService: PostsService) {}
 
-	p: number = 1;
-
-	constructor(private getPostsServiceService: GetPostsServiceService) {}
-
-	ngOnInit(): void {
-		this.getPostsServiceService.getPosts().subscribe((data) => {
-			this.posts = data;
-			console.log(this.posts);
-		});
-	}
+  ngOnInit(): void {
+    this.postsService.getPosts().subscribe((data) => {
+      this.posts = data;
+      console.log(this.posts);
+    });
+  }
 }

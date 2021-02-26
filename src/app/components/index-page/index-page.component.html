@@ -1,21 +1,44 @@
-			<div fxLayout="row wrap" fxLayoutAlign="space-around center" >
-				<mat-card *ngFor="let post of posts | paginate: { itemsPerPage: 12, currentPage: p }" class="example-card">
-					
-					<div>
-						<mat-card-header>
-							<mat-card-title>{{post.title}}</mat-card-title>
-						  </mat-card-header>
-						  <mat-card-content>
-							<p>
-							  {{post.body}}
-							</p>
-						  </mat-card-content>
-						  <div style="position: absolute;
-						  bottom: 0; margin-bottom: 10px;" >
-							  <a mat-button routerLink='details/{{post.id}}' routerLinkActive="active" color="primary"> details </a>
-					  </div>
-					</div>
-				  </mat-card>
-					 
-		  <pagination-controls (pageChange)="p = $event"></pagination-controls>
-		</div>
+<div fxLayout="row wrap" fxLayoutAlign="space-around center" >
+    <mat-card *ngFor="let post of posts | paginate: { itemsPerPage: 12, currentPage: p }">
+      
+      <div>
+        <mat-card-title>
+          {{post.title | uppercase}}
+        </mat-card-title>
+
+        <mat-card-subtitle>
+          posted on 26-Feb-2021 15:43 GMT +3
+        </mat-card-subtitle>
+    
+        <mat-card-content>
+          <img src="http://dummyimage.com/350x150/c0c0c0" />
+          {{post.body}}
+        </mat-card-content>
+    
+        <div class="card-footer">
+          <div class="card-actions" fxLayout="row" fxLayoutAlign="space-around center">
+            <div class="cw" matTooltip="What do you think about it?" matTooltipPosition="above">
+              <span class="material-icons c"><i class="c"></i></span>
+            </div>
+            <div class="lw" matTooltip="Do you like this article?" matTooltipPosition="above">
+              <span class="material-icons l"><i class="l"></i></span>
+            </div>
+            <div class="ww" matTooltip="3516 people aredy read this article" matTooltipPosition="above">
+              <span class="material-icons w"><i class="w"></i></span> 
+            </div>
+            <div class="btn-wrapper" id="details"> 
+              <a routerLink='details/{{post.id}}'>read more</a>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+      </mat-card>
+
+      <div class="paginator-wrapper" fxLayout="row " fxLayoutAlign="space-around center">
+        <div class="paginator">
+          <pagination-controls (pageChange)="p = $event" class="pagination"></pagination-controls>
+        </div>
+      </div>
+  </div>
+
