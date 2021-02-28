@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { IndexPageRoutes } from './index-page.routes';
+import { MainPageRoutes } from './main-page.routes';
 
-const routes: Routes = IndexPageRoutes;
+const routes: Routes = MainPageRoutes;
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class IndexPageRoutingModule {}
+export class MainPageRoutingModule {}

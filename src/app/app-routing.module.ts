@@ -11,8 +11,8 @@ const routes: Routes = [
   {
     path: 'news',
     loadChildren: () =>
-      import('../app/components/index-page/index-page.module').then(
-        (m) => m.IndexPageModule
+      import('./components/main-page/main-page.module').then(
+        (m) => m.MainPageModule
       ),
   },
   { path: '**', redirectTo: 'pageNotFound' },

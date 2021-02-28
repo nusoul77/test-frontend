@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { DetailsComponent } from './details.component';
+import { PostDetailsPageComponent } from './post-details-page.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
@@ -10,8 +10,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 
+import { BreadcrumbsModule } from '../breadcrumbs/breadcrumbs.module';
+
 @NgModule({
-  declarations: [DetailsComponent],
+  declarations: [PostDetailsPageComponent],
   imports: [
     CommonModule,
     RouterModule,
@@ -21,7 +23,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
+    BreadcrumbsModule,
   ],
-  exports: [DetailsComponent],
+  exports: [PostDetailsPageComponent],
 })
-export class DetailsModule {}
+export class PostDetailsPageModule {}

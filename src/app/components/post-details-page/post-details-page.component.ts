@@ -5,11 +5,11 @@ import { CommentsService } from 'src/app/services/comments.service';
 import { PostsService } from 'src/app/services/posts.service';
 
 @Component({
-  selector: 'app-detail',
-  templateUrl: './details.component.html',
-  styleUrls: ['./details.component.scss'],
+  selector: 'app-post-details-page',
+  templateUrl: './post-details-page.component.html',
+  styleUrls: ['./post-details-page.component.scss'],
 })
-export class DetailsComponent implements OnInit {
+export class PostDetailsPageComponent implements OnInit {
   post: Post;
   comments;
   constructor(

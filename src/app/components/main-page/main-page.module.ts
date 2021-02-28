@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
-import { IndexPageComponent } from './index-page.component';
-import { IndexPageRoutingModule } from './index-page-routing.module';
+import { MainPageComponent } from './main-page.component';
+import { MainPageRoutingModule } from './main-page-routing.module';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { DetailsModule } from './details/details.module';
+import { PostDetailsPageModule } from '../post-details-page/post-details-page.module';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCardModule } from '@angular/material/card';
@@ -12,18 +12,18 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
-  declarations: [IndexPageComponent],
+  declarations: [MainPageComponent],
   imports: [
     CommonModule,
     RouterModule,
-    IndexPageRoutingModule,
+    MainPageRoutingModule,
     MatCardModule,
     MatButtonModule,
     MatTooltipModule,
     FlexLayoutModule,
-    DetailsModule,
+    PostDetailsPageModule,
     NgxPaginationModule,
   ],
-  exports: [IndexPageComponent],
+  exports: [MainPageComponent],
 })
-export class IndexPageModule {}
+export class MainPageModule {}
