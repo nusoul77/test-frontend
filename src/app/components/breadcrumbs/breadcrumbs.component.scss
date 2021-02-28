@@ -1,0 +1,12 @@
+.breadcrumbs {
+  display: inline-flex;
+  list-style: none;
+
+  em {
+    margin: 0 4px;
+  }
+
+  .parent-link {
+    cursor: pointer;
+  }
+}

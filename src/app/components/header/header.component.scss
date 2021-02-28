@@ -1,0 +1,49 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+.header {
+  padding-left: 45px;
+  background: linear-gradient(170deg, #7d132d 50%, #790947 100%);
+  user-select: none;
+
+  a {
+    width: 100%;
+    height: auto;
+    display: contents;
+    text-decoration: underline #790974;
+
+    .logo {
+      text-align: center;
+      vertical-align: middle;
+      height: 60px;
+      font-family: Libre Baskerville, serif;
+      font-size: 28px;
+      font-weight: bold;
+      color: #fff;
+      margin-top: 40px;
+
+      img {
+        margin-top: 7px;
+      }
+    }
+  }
+}
+
+.menu-link {
+  color: #000;
+  text-decoration: none;
+  position: absolute;
+  right: 30px;
+}
+
+mat-icon {
+  color: #fff;
+}
+
+::ng-deep .mat-list-base .mat-list-item .mat-list-item-content,
+::ng-deep .mat-list-base .mat-list-option .mat-list-item-content {
+  width: 250px !important;
+  text-decoration: none !important;
+  color: black !important;
+}

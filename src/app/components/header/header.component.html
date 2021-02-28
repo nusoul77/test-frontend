@@ -1,0 +1,36 @@
+<mat-toolbar class="header">
+  <a href="">
+    <div class="logo">
+      <span>Capitol </span>
+    </div>
+    <div>
+      <img src="../assets/logo.png" alt="Capitol Hill logo">
+    </div>
+    <div style="user-select: none;" class="logo">
+      <span>Hill </span>
+    </div>
+    
+  </a>
+
+  <span class="spacer"></span>
+
+  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+    <mat-menu #menu="matMenu">
+      <mat-list>
+        <mat-list-item>
+          <a routerLink='/' routerLinkActive="active" class="menu-link">main</a>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+          <a routerLink='#' routerLinkActive="active" class="menu-link">about</a>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+          <a routerLink='#' routerLinkActive="active" class="menu-link">contacts</a>
+        </mat-list-item>
+      </mat-list>
+    </mat-menu>
+    
+</mat-toolbar>

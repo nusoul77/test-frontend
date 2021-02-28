@@ -1,10 +1,9 @@
 <ul class="breadcrumbs">
   <li>
-    <!-- routerlink to home page -->
-    <a href="">home</a>
+    <a (click)='goBack()' class="parent-link">main</a>
   </li>
+  <em>></em>
   <li>
-    <!-- real title of current post in details page -->
-    <span>post title</span>
+    <span>{{title}}</span>
   </li>
 </ul>

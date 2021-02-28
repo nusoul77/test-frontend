@@ -14,11 +14,16 @@ export class MainPageComponent implements OnInit {
   constructor(private postsService: PostsService) {}
 
   ngOnInit(): void {
-    this.postsService.getPosts().subscribe((data: []) => {
-      this.posts = data;
-      this.sidePosts = this.posts.slice(0, 20);
-      // console.log(this.posts);
-      // console.log(this.sidePosts);
+    this.postsService.getPosts().subscribe((data) => {
+      this.posts = data.reverse();
+      this.sidePosts = this.posts.splice(
+        this.posts.length - 25,
+        this.posts.length
+      );
+      this.posts = this.posts.splice(0, this.posts.length - 25);
     });
+
+    // console.log(this.posts);
+    // console.log(this.sidePosts);
   }
 }

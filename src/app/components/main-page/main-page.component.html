@@ -17,15 +17,17 @@
     <mat-card *ngFor="let post of posts | paginate: { itemsPerPage: 10, currentPage: p }">
       
       <div>
-        <mat-card-title>
-          {{post.title | uppercase}}
-        </mat-card-title>
-
-        <mat-card-subtitle>
-          posted on 26-Feb-2021 15:43 GMT +3
-        </mat-card-subtitle>
+        <div>
+          <mat-card-title >
+            <a routerLink='details/{{post.id}}' alt="{{post.title}}" title="{{post.title}}">{{post.title | uppercase}}</a>
+          </mat-card-title>
+  
+          <mat-card-subtitle>
+            posted on 26-Feb-2021 15:43 GMT +3
+          </mat-card-subtitle>
+        </div>
     
-        <mat-card-content>
+        <mat-card-content routerLink='details/{{post.id}}'>
           <img src="http://dummyimage.com/350x150/c0c0c0" />
           {{post.body}}
         </mat-card-content>
