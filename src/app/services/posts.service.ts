@@ -8,6 +8,7 @@ import { Post } from '../interfaces/post';
 })
 export class PostsService {
   posts;
+  status: any;
 
   constructor(private http: HttpClient) {}
 
@@ -28,5 +29,13 @@ export class PostsService {
           return res;
         })
       );
+  }
+
+  getStatus(id) {
+    return this.http
+      .get(`https://jsonplaceholder.typicode.com/posts/${id}`, {
+        observe: 'response',
+      })
+      .pipe((response) => response);
   }
 }

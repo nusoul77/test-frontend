@@ -30,16 +30,17 @@
   }
 }
 
-.menu-link {
-  color: #000;
-  text-decoration: none;
-  position: absolute;
-  right: 30px;
-}
+// .menu-link {
+//   color: #000;
+//   text-decoration: none;
+//   position: absolute;
+//   right: 30px;
+//   text-transform: uppercase;
+// }
 
-mat-icon {
-  color: #fff;
-}
+// mat-icon {
+//   color: #fff;
+// }
 
 ::ng-deep .mat-list-base .mat-list-item .mat-list-item-content,
 ::ng-deep .mat-list-base .mat-list-option .mat-list-item-content {
