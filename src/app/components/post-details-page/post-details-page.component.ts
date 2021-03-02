@@ -23,12 +23,10 @@ export class PostDetailsPageComponent implements OnInit {
 
     this.postsService.getPost(id).subscribe((data) => {
       this.post = data;
-      console.log(this.post);
     });
 
     this.commentsService.getComments(id).subscribe((data) => {
       this.comments = data;
-      console.log(this.post);
     });
   }
 }

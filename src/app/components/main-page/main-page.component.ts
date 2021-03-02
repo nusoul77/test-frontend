@@ -22,8 +22,5 @@ export class MainPageComponent implements OnInit {
       );
       this.posts = this.posts.splice(0, this.posts.length - 25);
     });
-
-    // console.log(this.posts);
-    // console.log(this.sidePosts);
   }
 }

@@ -11,10 +11,10 @@ import { PostsService } from 'src/app/services/posts.service';
 export class BreadcrumbsComponent implements OnInit {
   route: ActivatedRoute;
   post: Post;
+  @Input() title: string;
   constructor(private router: Router, private postsService: PostsService) {}
 
   ngOnInit(): void {}
-  @Input() title: string;
   goBack(): void {
     this.router.navigate(['../'], { relativeTo: this.route });
   }

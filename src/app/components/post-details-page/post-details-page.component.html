@@ -1,9 +1,9 @@
-<app-breadcrumbs [title]="post.title"></app-breadcrumbs>
+<app-breadcrumbs *ngIf="post" [title]="post.title"></app-breadcrumbs>
 <div fxLayout="row" fxLayoutAlign="space-evenly center">
   <div>
     <div *ngIf="post">
       <mat-card>
-        <div>
+        <div class="card-wrapper">
           <mat-card-title>
             {{post.title | uppercase}}
           </mat-card-title>
@@ -14,35 +14,7 @@
       
           <mat-card-content>
             <img src="http://dummyimage.com/300x350/c0c0c0" />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam, nobis tempora voluptates excepturi sint? Voluptatem recusandae officiis sint illum beatae suscipit id deserunt atque aliquid iusto!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam, nobis tempora voluptates excepturi sint? Voluptatem recusandae officiis sint illum beatae suscipit id deserunt atque aliquid iusto!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam, nobis tempora voluptates excepturi sint? Voluptatem recusandae officiis sint illum beatae suscipit id deserunt atque aliquid iusto!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam, nobis tempora voluptates excepturi sint? Voluptatem recusandae officiis sint illum beatae suscipit id deserunt atque aliquid iusto!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam, nobis tempora voluptates excepturi sint? Voluptatem recusandae officiis sint illum beatae suscipit id deserunt atque aliquid iusto!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam, nobis tempora voluptates excepturi sint? Voluptatem recusandae officiis sint illum beatae suscipit id deserunt atque aliquid iusto!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam, nobis tempora voluptates excepturi sint? Voluptatem recusandae officiis sint illum beatae suscipit id deserunt atque aliquid iusto!
-             </p>
-             <h2>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam,
-             </h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam, nobis tempora voluptates excepturi sint? Voluptatem recusandae officiis sint illum beatae suscipit id deserunt atque aliquid iusto!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam, nobis tempora voluptates excepturi sint? Voluptatem recusandae officiis sint illum beatae suscipit id deserunt atque aliquid iusto!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam, nobis tempora voluptates excepturi sint? Voluptatem recusandae officiis sint illum beatae suscipit id deserunt atque aliquid iusto!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam, nobis tempora voluptates excepturi sint? Voluptatem recusandae officiis sint illum beatae suscipit id deserunt atque aliquid iusto!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam, nobis tempora voluptates excepturi sint? Voluptatem recusandae officiis sint illum beatae suscipit id deserunt atque aliquid iusto!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam, nobis tempora voluptates excepturi sint? Voluptatem recusandae officiis sint illum beatae suscipit id deserunt atque aliquid iusto!
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam, nobis tempora voluptates excepturi sint? Voluptatem recusandae officiis sint illum beatae suscipit id deserunt atque aliquid iusto!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam, nobis tempora voluptates excepturi sint? Voluptatem recusandae officiis sint illum beatae suscipit id deserunt atque aliquid iusto!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam, nobis tempora voluptates excepturi sint? Voluptatem recusandae officiis sint illum beatae suscipit id deserunt atque aliquid iusto!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam, nobis tempora voluptates excepturi sint? Voluptatem recusandae officiis sint illum beatae suscipit id deserunt atque aliquid iusto!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam, nobis tempora voluptates excepturi sint? Voluptatem recusandae officiis sint illum beatae suscipit id deserunt atque aliquid iusto!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam, nobis tempora voluptates excepturi sint? Voluptatem recusandae officiis sint illum beatae suscipit id deserunt atque aliquid iusto!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ab quo quibusdam, nobis tempora voluptates excepturi sint? Voluptatem recusandae officiis sint illum beatae suscipit id deserunt atque aliquid iusto!
-              </p>
+            <p>{{post.body}}</p>
           </mat-card-content>
       
           <div class="card-footer">
